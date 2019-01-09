@@ -1,5 +1,6 @@
 package com.iesvirgendelcarmen.dam.sensores06;
 
+import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -14,9 +15,9 @@ public class Sensores06 extends AppCompatActivity implements SensorEventListener
     double distancia;
     String proximidad;
     TextView tvProximidad, tvDistancia, tvContador;
-    Sensor sensorProximo;
-    SensorManager sensorManager;
 
+    SensorManager sensorManager;
+    Sensor sensorProximo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,10 @@ public class Sensores06 extends AppCompatActivity implements SensorEventListener
         tvDistancia = findViewById(R.id.orientacion);
         tvContador = findViewById(R.id.lecturas);
 
-        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensorProximo = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
-        runOnUiThread(new CambiaTexto());
+
     }
 
 
@@ -47,6 +48,7 @@ public class Sensores06 extends AppCompatActivity implements SensorEventListener
         } else {
             proximidad = "LEJOS";
         }
+        runOnUiThread(new CambiaTexto());
     }
 
     @Override
