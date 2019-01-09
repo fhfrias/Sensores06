@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sensores06">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SENSOR DE PROXIMIDAD"
+        android:textSize="20dp"
+        android:textColor="#ababab"
+        android:textStyle="bold"
+        />
+    <View android:background="#ababab"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PROXIMIDAD"
+        android:textColor="#d9a1e5"
+        />
+    <TextView
+        android:id="@+id/proximidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PROXIMIDAD"
+        android:textColor="#070008"
+        />
+    <TextView
+        android:id="@+id/orientacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ORIENTACION"
+        android:textColor="#ef1120"/>
+    <View android:background="#ababab"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NUMERO DE LECTURAS"
+        android:textColor="#d9a1e5"
+        />
+    <TextView
+        android:id="@+id/lecturas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cero"
+        android:textColor="#070008"
+        />
+</LinearLayout>
